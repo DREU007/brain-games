@@ -28,3 +28,18 @@ def user_reply(correct_answer, user_name):
             f"Let's try again, {user_name}!")
         print(wrong_msg)
         exit()
+
+
+def print_win(user_name):
+    win_msg = f'Congratulations, {user_name}!'
+    print(win_msg)
+
+
+def core_algorithm(single_game):
+    """Algorithm of program."""
+    name = welcome_new_user()
+    cycles = 3
+    for cycle in range(cycles):
+        answer = single_game()
+        user_reply(answer, name)
+    print_win(name)
