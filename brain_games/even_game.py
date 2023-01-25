@@ -3,7 +3,7 @@
 A player has to answer 3 times, is number even?
 And reply with 'yes' or 'no'."""
 
-from brain_games.common_core import welcome_new_user, user_reply
+from brain_games.common_core import core_algorithm
 from random import randint
 
 
@@ -20,22 +20,14 @@ def is_random_even():
 
 def single_even_game():
     """Print a question with a number and reply to user input."""
-    explanation_msg = (
-        'Answer "yes" if the number is even, otherwise answer "no".')
-    print(explanation_msg)
-
     number, cor_answer = is_random_even()
-    question_msg = f'Question: {number}'
-    print(question_msg)
+    invite_msg = (
+        'Answer "yes" if the number is even, otherwise answer "no".'
+        f'Question: {number}')
+    print(invite_msg)
     return cor_answer
 
 
 def main():
     """Algorithm of program."""
-    name = welcome_new_user()
-    cycles = 3
-    for cycle in range(cycles):
-        answer = single_even_game()
-        user_reply(answer, name)
-    win_msg = f'Congratulations, {name}!'
-    print(win_msg)
+    core_algorithm(single_even_game())
