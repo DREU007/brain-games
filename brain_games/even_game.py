@@ -22,7 +22,7 @@ def single_even_game():
     """Print a question with a number and reply to user input."""
     number, cor_answer = is_random_even()
     invite_msg = (
-        'Answer "yes" if the number is even, otherwise answer "no".'
+        'Answer "yes" if the number is even, otherwise answer "no".\n'
         f'Question: {number}')
     print(invite_msg)
     return cor_answer
@@ -30,4 +30,4 @@ def single_even_game():
 
 def main():
     """Algorithm of program."""
-    core_algorithm(single_even_game())
+    core_algorithm(single_even_game)

@@ -17,11 +17,11 @@ def single_calc_game():
         result = val1 + val2
     else:
         result = val1 - val2
-    invite_msg = ('What is the result of the expression?'
+    invite_msg = ('What is the result of the expression?\n'
                   f'Question: {val1} {operator} {val2}')
     print(invite_msg)
-    return result
+    return str(result)
 
 
 def main():
-    core_algorithm(single_calc_game())
+    core_algorithm(single_calc_game)
