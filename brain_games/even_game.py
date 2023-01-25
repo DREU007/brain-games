@@ -3,20 +3,8 @@
 A player has to answer 3 times, is number even?
 And reply with 'yes' or 'no'."""
 
-from sys import exit
-from prompt import string
+from brain_games.common_core import welcome_new_user, user_reply
 from random import randint
-
-
-def welcome_new_user():
-    """Print a welcome msg to user, request his name and return user_name."""
-    welcome_msg = 'Welcome to the Brain Games!'
-    print(welcome_msg)
-    name = string('May I have your name? ')
-    welcome_reply = f'Hello, {name}!'
-
-    print(welcome_reply)
-    return name
 
 
 def is_random_even():
@@ -30,26 +18,16 @@ def is_random_even():
     return r_number, is_even
 
 
-def single_game(name):
+def single_even_game():
     """Print a question with a number and reply to user input."""
     explanation_msg = (
         'Answer "yes" if the number is even, otherwise answer "no".')
     print(explanation_msg)
 
-    number, is_even = is_random_even()
+    number, cor_answer = is_random_even()
     question_msg = f'Question: {number}'
     print(question_msg)
-
-    user_answer = string('Your answer: ')
-    if user_answer == is_even:
-        print('Correct!')
-    else:
-        wrong_msg = (
-            f"'{user_answer}' is wrong answer ;(. "
-            f"Correct answer was '{is_even}'.\n"
-            f"Let's try again, {name}!")
-        print(wrong_msg)
-        exit()
+    return cor_answer
 
 
 def main():
@@ -57,9 +35,7 @@ def main():
     name = welcome_new_user()
     cycles = 3
     for cycle in range(cycles):
-        single_game(name)
+        answer = single_even_game()
+        user_reply(answer, name)
     win_msg = f'Congratulations, {name}!'
     print(win_msg)
-
-
-
