@@ -4,3 +4,4 @@
 [![asciicast](https://asciinema.org/a/OgtYYBaGxxeHF3fjqUKp6pqgM.svg)](https://asciinema.org/a/OgtYYBaGxxeHF3fjqUKp6pqgM "Install guide & brain-even game example")
 [![asciicast](https://asciinema.org/a/3SOj8EWBq5VJ7Eub7n3lbl9pZ.svg)](https://asciinema.org/a/3SOj8EWBq5VJ7Eub7n3lbl9pZ "Brain-calc game example")
 [![asciicast](https://asciinema.org/a/WSMghIIhIJP0TWOC0T6z4CsJQ.svg)](https://asciinema.org/a/WSMghIIhIJP0TWOC0T6z4CsJQ "Brain-gcd game example")
+[![asciicast](https://asciinema.org/a/6Rl2v4SVdBs1BKIeV2jU1MfGM.svg)](https://asciinema.org/a/6Rl2v4SVdBs1BKIeV2jU1MfGM "Brain-progression game example")
