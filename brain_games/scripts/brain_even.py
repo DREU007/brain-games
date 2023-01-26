@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Script to run brain_games.even_game."""
+"""Script to run brain-even in global environment."""
 
 from brain_games.games.even_game import main
 
