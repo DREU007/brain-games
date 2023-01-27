@@ -9,6 +9,7 @@ def game_instruction():
     invite_msg = 'What number is missing in the progression?\n'
     print(invite_msg)
 
+
 def single_progression_game():
     """Assign progression, exclude one item and invite user to guess it.
     Return correct answer."""
