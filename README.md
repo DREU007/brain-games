@@ -12,7 +12,7 @@ Brain-games is a collection of simple games for terminal. Play and train your br
 #### Installation
 
 ```
-git clone https://github.com/DREU007/python-project-49.git 
+git clone https://github.com/DREU007/python-project-49 
 cd python-package
 make package-install
 ```
