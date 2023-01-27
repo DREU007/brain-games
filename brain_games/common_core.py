@@ -35,9 +35,10 @@ def print_win(user_name):
     print(win_msg)
 
 
-def core_algorithm(single_game):
+def core_algorithm(instruction, single_game):
     """Algorithm of program."""
     name = welcome_new_user()
+    instruction()
     cycles = 3
     for cycle in range(cycles):
         answer = single_game()

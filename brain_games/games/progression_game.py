@@ -5,6 +5,10 @@ from brain_games.common_core import core_algorithm
 from random import randint
 
 
+def game_instruction():
+    invite_msg = 'What number is missing in the progression?\n'
+    print(invite_msg)
+
 def single_progression_game():
     """Assign progression, exclude one item and invite user to guess it.
     Return correct answer."""
@@ -17,12 +21,11 @@ def single_progression_game():
     answer = progression_list[missing_item]
     progression_list[missing_item] = '..'
 
-    invite_msg = ('What number is missing in the progression?\n'
-                  f'Question: {" ".join(progression_list)}')
-    print(invite_msg)
+    question_msg = f'Question: {" ".join(progression_list)}'
+    print(question_msg)
     return answer
 
 
 def main():
     """Start progression game."""
-    core_algorithm(single_progression_game)
+    core_algorithm(game_instruction, single_progression_game)
