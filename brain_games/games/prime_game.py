@@ -1,14 +1,13 @@
 """Prime game.
 
 User has to guess is the number prime or not."""
-from brain_games.common_core import core_algorithm
 from random import randint
 
 
-def game_instruction():
-    invite_msg = (
-        'Answer "yes" if given number is prime. Otherwise answer "no".')
-    print(invite_msg)
+def give_task():
+    """Return task for a user."""
+    task_msg = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    return task_msg
 
 
 def is_value_prime(value):
@@ -22,18 +21,12 @@ def is_value_prime(value):
         mod += 1
 
 
-def prime_single_game():
-    """Invite user to answer a question, return correct result."""
+def assign_question_answer():
+    """Return a question and correct answer"""
     begin = 1
     end = 500
     question_value = randint(begin, end)
     correct_answer = is_value_prime(question_value)
 
     question_msg = f'Question: {question_value}'
-    print(question_msg)
-    return correct_answer
-
-
-def main():
-    """Start prime game."""
-    core_algorithm(game_instruction, prime_single_game)
+    return question_msg, correct_answer
