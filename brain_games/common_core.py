@@ -3,44 +3,35 @@ from prompt import string
 from sys import exit
 
 
-def welcome_new_user():
-    """Print a welcome msg to user, request his name and return user_name."""
+def core_algorithm(game_task, assign_game_question_answer):
+    """Algorithm of program."""
     welcome_msg = 'Welcome to the Brain Games!'
     print(welcome_msg)
-    name = string('May I have your name? ')
-    welcome_reply = f'Hello, {name}!'
+
+    user_name = string('May I have your name? ')
+    welcome_reply = f'Hello, {user_name}!'
     print(welcome_reply)
-    return name
 
+    # print(game_task)
+    game_task()
 
-def user_reply(correct_answer, user_name):
-    """Check correct_answer with user_answer.
+    num_cycles = 3
+    for cycle in range(num_cycles):
+        # question, correct_answer = assign_game_question_answer()
+        # print(question)
+        correct_answer = assign_game_question_answer()
 
-    Print msg if True or False and exit.
-    """
-    user_answer = string('Your answer: ')
-    if user_answer == correct_answer:
-        print('Correct!')
-    else:
-        wrong_msg = (
-            f"'{user_answer}' is wrong answer ;(. "
-            f"Correct answer was '{correct_answer}'.\n"
-            f"Let's try again, {user_name}!")
-        print(wrong_msg)
-        exit()
+        user_answer = string('Your answer: ')
+        if user_answer == correct_answer:
+            print('Correct!')
 
+        else:
+            wrong_msg = (
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'.\n"
+                f"Let's try again, {user_name}!")
+            print(wrong_msg)
+            exit()
 
-def print_win(user_name):
     win_msg = f'Congratulations, {user_name}!'
     print(win_msg)
-
-
-def core_algorithm(instruction, single_game):
-    """Algorithm of program."""
-    name = welcome_new_user()
-    instruction()
-    cycles = 3
-    for cycle in range(cycles):
-        answer = single_game()
-        user_reply(answer, name)
-    print_win(name)
