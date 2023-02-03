@@ -6,12 +6,12 @@ from brain_games.common_core import core_algorithm
 from random import randint, choice
 
 
-def game_instruction():
-    invite_msg = 'What is the result of the expression?'
-    print(invite_msg)
+def give_task():
+    task_msg = 'What is the result of the expression?'
+    print(task_msg)
 
 
-def single_calc_game():
+def make_single_calc_game():
     """Create a question for the user and return correct answer"""
     val1, val2 = [randint(1, 100) for _ in range(2)]
     available_operators = ['*', '+', '-']
@@ -28,4 +28,4 @@ def single_calc_game():
 
 
 def main():
-    core_algorithm(game_instruction, single_calc_game)
+    core_algorithm(give_task, make_single_calc_game)
