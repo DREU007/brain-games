@@ -1,37 +1,27 @@
 """Brain-even game.
 
-A player has to answer 3 times, is number even?
+A player has to answer is number even?
 And reply with 'yes' or 'no'."""
-
-from brain_games.common_core import core_algorithm
 from random import randint
 
 
-def game_instruction():
-    invite_msg = (
-        'Answer "yes" if the number is even, otherwise answer "no".')
-    print(invite_msg)
+def give_task():
+    """Return task for a user."""
+    task_msg = 'Answer "yes" if the number is even, otherwise answer "no".'
+    return task_msg
 
 
-def is_random_even():
+def create_number_and_is_it_even(range_start=1, range_finish=1_000):
     """Return integer and is it even or not (True/False)."""
-    range_start = 1
-    range_end = 1_000
-    r_number = randint(range_start, range_end)
+    number = randint(range_start, range_finish)
     is_even = 'yes'
-    if r_number % 2:
+    if number % 2:
         is_even = 'no'
-    return r_number, is_even
+    return number, is_even
 
 
-def single_even_game():
-    """Print a question with a number and reply to user input."""
-    number, cor_answer = is_random_even()
+def assign_question_answer():
+    """Return a question and correct answer"""
+    number, cor_answer = create_number_and_is_it_even()
     question_msg = f'Question: {number}'
-    print(question_msg)
-    return cor_answer
-
-
-def main():
-    """Algorithm of program."""
-    core_algorithm(game_instruction, single_even_game)
+    return question_msg, cor_answer
