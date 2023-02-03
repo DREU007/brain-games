@@ -3,7 +3,7 @@ from prompt import string
 from sys import exit
 
 
-def core_algorithm(game_task, assign_game_question_answer):
+def run_game(game_task, assign_game_question_answer):
     """Algorithm of program."""
     welcome_msg = 'Welcome to the Brain Games!'
     print(welcome_msg)
@@ -12,14 +12,12 @@ def core_algorithm(game_task, assign_game_question_answer):
     welcome_reply = f'Hello, {user_name}!'
     print(welcome_reply)
 
-    # print(game_task)
-    game_task()
+    print(game_task())
 
     num_cycles = 3
     for cycle in range(num_cycles):
-        # question, correct_answer = assign_game_question_answer()
-        # print(question)
-        correct_answer = assign_game_question_answer()
+        question, correct_answer = assign_game_question_answer()
+        print(question)
 
         user_answer = string('Your answer: ')
         if user_answer == correct_answer:
