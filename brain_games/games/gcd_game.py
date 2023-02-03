@@ -2,14 +2,13 @@
 
 User has to give his answer what is the greatest common divider
 for the two random given integers."""
-
-from brain_games.common_core import core_algorithm
 from random import randint
 
 
-def game_instruction():
-    invite_msg = 'Find the greatest common divisor of given numbers.'
-    print(invite_msg)
+def give_task():
+    """Return task for a user."""
+    task_msg = 'Find the greatest common divisor of given numbers.'
+    return task_msg
 
 
 def prepare_values():
@@ -20,15 +19,9 @@ def prepare_values():
             return a, b, divider
 
 
-def gcd_single_game():
-    """Prepare question for a user and return correct answer."""
+def assign_question_answer():
+    """Return a question and correct answer"""
     val1, val2, answer = prepare_values()
 
     question_msg = f'Question: {val1} {val2}'
-    print(question_msg)
-    return str(answer)
-
-
-def main():
-    """Start gcd game."""
-    core_algorithm(game_instruction, gcd_single_game)
+    return question_msg, str(answer)
