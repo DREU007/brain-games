@@ -1,2 +1,2 @@
 exclude_patterns:
-  - "brain_games/script/"
+  - "brain_games/scripts/"
