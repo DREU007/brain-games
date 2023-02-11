@@ -7,22 +7,23 @@ TASK_MSG = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_value_prime(value):
-    """Check_is_the"""
+    """Check is the value prime?"""
     mod = 2
     while mod <= value:
         if value == mod:
-            return 'yes'
+            return True
         elif value % mod == 0:
-            return 'no'
+            return False
         mod += 1
+    return False
 
 
 def get_question_answer():
     """Return a question and correct answer"""
     begin = 1
     end = 500
-    question_value = randint(begin, end)
-    correct_answer = is_value_prime(question_value)
+    value = randint(begin, end)
+    question_msg = f'{value}'
+    answer = 'yes' if is_value_prime(value) else 'no'
 
-    question_msg = f'{question_value}'
-    return question_msg, correct_answer
+    return question_msg, answer
