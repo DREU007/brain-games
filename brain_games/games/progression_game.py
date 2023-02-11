@@ -14,7 +14,7 @@ def get_question_answer():
     start = randint(1, 100)
     finish = start + step * num_items + 1
 
-    progression_list = list(range(start, finish, step))
+    progression_list = list(map(str, (range(start, finish, step))))
     missing_item = randint(0, num_items - 1)
     answer = progression_list[missing_item]
     progression_list[missing_item] = '..'
