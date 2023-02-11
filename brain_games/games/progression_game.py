@@ -10,10 +10,11 @@ def get_question_answer():
     """Assign progression, exclude one item.
     Return a question and correct answer."""
     num_items = randint(5, 10)
-    start_psn = randint(1, 100)
     step = randint(1, 20)
-    progression_list = [
-        str(start_psn + item * step) for item in range(num_items)]
+    start = randint(1, 100)
+    finish = start + step * num_items + 1
+
+    progression_list = list(range(start, finish, step))
     missing_item = randint(0, num_items - 1)
     answer = progression_list[missing_item]
     progression_list[missing_item] = '..'
