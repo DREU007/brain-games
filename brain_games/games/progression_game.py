@@ -3,14 +3,10 @@
 User has to give missing value in progression"""
 from random import randint
 
-
-def give_task():
-    """Return task for a user."""
-    task_msg = 'What number is missing in the progression?'
-    return task_msg
+TASK_MSG = 'What number is missing in the progression?'
 
 
-def assign_question_answer():
+def get_question_answer():
     """Assign progression, exclude one item.
     Return a question and correct answer."""
     num_items = randint(5, 10)
@@ -22,5 +18,5 @@ def assign_question_answer():
     answer = progression_list[missing_item]
     progression_list[missing_item] = '..'
 
-    question_msg = f'Question: {" ".join(progression_list)}'
+    question_msg = f'{" ".join(progression_list)}'
     return question_msg, answer

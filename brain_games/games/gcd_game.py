@@ -4,11 +4,7 @@ User has to give his answer what is the greatest common divider
 for the two random given integers."""
 from random import randint
 
-
-def give_task():
-    """Return task for a user."""
-    task_msg = 'Find the greatest common divisor of given numbers.'
-    return task_msg
+TASK_MSG = 'Find the greatest common divisor of given numbers.'
 
 
 def prepare_values():
@@ -19,9 +15,9 @@ def prepare_values():
             return a, b, divider
 
 
-def assign_question_answer():
+def get_question_answer():
     """Return a question and correct answer"""
     val1, val2, answer = prepare_values()
 
-    question_msg = f'Question: {val1} {val2}'
+    question_msg = f'{val1} {val2}'
     return question_msg, str(answer)

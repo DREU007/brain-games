@@ -4,11 +4,7 @@ A player has to answer is number even?
 And reply with 'yes' or 'no'."""
 from random import randint
 
-
-def give_task():
-    """Return task for a user."""
-    task_msg = 'Answer "yes" if the number is even, otherwise answer "no".'
-    return task_msg
+TASK_MSG = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def create_number_and_is_it_even(range_start=1, range_finish=1_000):
@@ -20,8 +16,8 @@ def create_number_and_is_it_even(range_start=1, range_finish=1_000):
     return number, answer_is_even
 
 
-def assign_question_answer():
+def get_question_answer():
     """Return a question and correct answer"""
     number, cor_answer = create_number_and_is_it_even()
-    question_msg = f'Question: {number}'
+    question_msg = f'{number}'
     return question_msg, cor_answer

@@ -4,14 +4,10 @@ Player has to calculate values and give his result.
 """
 from random import randint, choice
 
-
-def give_task():
-    """Return task for a user."""
-    task_msg = 'What is the result of the expression?'
-    return task_msg
+TASK_MSG = 'What is the result of the expression?'
 
 
-def assign_question_answer():
+def get_question_answer():
     """Return a question and correct answer"""
     val1, val2 = [randint(1, 100) for _ in range(2)]
     available_operators = ['*', '+', '-']
@@ -23,5 +19,5 @@ def assign_question_answer():
     else:
         result = val1 - val2
 
-    question_msg = f'Question: {val1} {operator} {val2}'
+    question_msg = f'{val1} {operator} {val2}'
     return question_msg, str(result)
