@@ -12,5 +12,5 @@ def get_question_answer():
     start, finish = 1, 1_000
     number = randint(start, finish)
     question_msg = f'{number}'
-    answer = 'no' if question_msg % 2 else 'yes'
+    answer = 'no' if number % 2 else 'yes'
     return question_msg, answer
