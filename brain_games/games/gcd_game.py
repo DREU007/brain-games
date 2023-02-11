@@ -7,17 +7,17 @@ from random import randint
 TASK_MSG = 'Find the greatest common divisor of given numbers.'
 
 
-def prepare_values():
-    """Prepare data for a question, return a, b values and correct answer."""
-    a, b = [randint(1, 100) for _ in range(2)]
+def get_highest_divider_for(a, b):
+    """Checking for highest common divider for values (a, b) and return it."""
     for divider in range(min(a, b), 0, -1):
         if a % divider == 0 and b % divider == 0:
-            return a, b, divider
+            return divider
 
 
 def get_question_answer():
     """Return a question and correct answer"""
-    val1, val2, answer = prepare_values()
+    val1, val2, = [randint(1, 100) for _ in range(2)]
+    answer = get_highest_divider_for(val1, val2)
 
     question_msg = f'{val1} {val2}'
     return question_msg, str(answer)
