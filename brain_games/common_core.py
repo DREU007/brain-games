@@ -14,8 +14,9 @@ def run_game(game_task, get_game_question_answer):
 
     print(game_task)
 
-    num_cycles = 3
-    for cycle in range(num_cycles):
+    cycles_count = 3
+    # num_cycles = 3
+    for cycle in range(cycles_count):
         question, correct_answer = get_game_question_answer()
         print('Question: ' + question)
 

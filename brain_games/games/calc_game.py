@@ -10,7 +10,9 @@ TASK_MSG = 'What is the result of the expression?'
 
 def get_question_answer():
     """Return a question and correct answer"""
-    val1, val2 = [randint(1, 100) for _ in range(2)]
+    # val1, val2 = [randint(1, 100) for _ in range(2)]
+    val1 = randint(1, 100)
+    val2 = randint(1, 100)
     operations = (
         ('+', add),
         ('-', sub),
