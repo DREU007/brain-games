@@ -20,10 +20,8 @@ def is_value_prime(value):
 
 def get_question_answer():
     """Return a question and correct answer"""
-    begin = 1
-    end = 500
-    value = randint(begin, end)
+    value = randint(1, 500)
+
     question_msg = f'{value}'
     answer = 'yes' if is_value_prime(value) else 'no'
-
     return question_msg, answer
