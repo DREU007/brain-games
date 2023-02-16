@@ -16,8 +16,9 @@ def get_highest_divider_for(a, b):
 
 def get_question_answer():
     """Return a question and correct answer"""
-    val1, val2, = [randint(1, 100) for _ in range(2)]
-    answer = get_highest_divider_for(val1, val2)
+    val1 = randint(1, 100)
+    val2 = randint(1, 100)
 
     question_msg = f'{val1} {val2}'
+    answer = get_highest_divider_for(val1, val2)
     return question_msg, str(answer)
