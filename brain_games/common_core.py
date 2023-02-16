@@ -5,32 +5,30 @@ from sys import exit
 
 def run_game(game_task, get_game_question_answer):
     """Algorithm of program."""
-    welcome_msg = 'Welcome to the Brain Games!'
-    print(welcome_msg)
+    print('Welcome to the Brain Games!')
 
     user_name = string('May I have your name? ')
-    welcome_reply = f'Hello, {user_name}!'
-    print(welcome_reply)
-
-    print(game_task)
+    print(
+        f"Hello, {user_name}!\n"
+        f"{game_task}"
+    )
 
     cycles_count = 3
     # num_cycles = 3
     for cycle in range(cycles_count):
         question, correct_answer = get_game_question_answer()
-        print('Question: ' + question)
+        print(f'Question: {question}')
 
         user_answer = string('Your answer: ')
         if user_answer == correct_answer:
             print('Correct!')
 
         else:
-            wrong_msg = (
+            print(
                 f"'{user_answer}' is wrong answer ;(. "
                 f"Correct answer was '{correct_answer}'.\n"
-                f"Let's try again, {user_name}!")
-            print(wrong_msg)
+                f"Let's try again, {user_name}!"
+            )
             exit()
 
-    win_msg = f'Congratulations, {user_name}!'
-    print(win_msg)
+    print(f'Congratulations, {user_name}!')
