@@ -6,6 +6,8 @@
 [![Actions Status](https://github.com/DREU007/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/DREU007/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/06c5399872825a086ca9/maintainability)](https://codeclimate.com/github/DREU007/python-project-49/maintainability)
 
+
+#### Description
 Brain-games is a collection of simple games for terminal. Play and train your brain.
 
 
